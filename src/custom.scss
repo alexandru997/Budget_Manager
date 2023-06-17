@@ -1,0 +1,177 @@
+// Override default variables before the import
+// $body-bg: #000;
+
+// Import Bootstrap and its default variables
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+.rounded-4 {
+    border-radius: 0.8rem;
+}
+
+.rounded-5 {
+    border-radius: 1.5rem;
+}
+
+.shadow-3 {
+    box-shadow: -0.8rem 1.5rem 0.8rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.progress-prosition {
+    position: relative;
+}
+
+.progress-desc {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: $black;
+    float: left;
+    text-align: center;
+}
+
+$card-gradient-percent: 55%;
+.nav-link_active {
+    .nav-link_active-bar {
+        height: 35px;
+        margin-right: 10px;
+        width: 5px;
+        background-color: $yellow;
+        border-radius: 10px;
+        animation: bar_active 0.25s;
+    }
+}
+
+@keyframes bar_active {
+    0% {
+        width: 0px;
+        opacity: 0;
+    }
+    50% {
+        width: 3px;
+        opacity: 0.5;
+    }
+}
+
+.btn-singin {
+    border: 1px solid $red-700;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 11px 29px;
+    animation: btn_singin_animation 0.5s ease-in-out;
+}
+
+@keyframes btn_singin_animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo--animated {
+    animation: logo_animation 0.5s ease-in-out;
+}
+
+@keyframes logo_animation {
+    0% {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.bg-c {
+    &-blue {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $blue
+        );
+    }
+    &-indigo {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $indigo
+        );
+    }
+    &-purple {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $purple
+        );
+    }
+
+    &-purple {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $purple
+        );
+    }
+
+    &-pink {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $pink
+        );
+    }
+
+    &-red {
+        background: linear-gradient(45deg, $black $card-gradient-percent, $red);
+    }
+
+    &-orange {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $orange
+        );
+    }
+
+    &-yellow {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $yellow
+        );
+    }
+
+    &-green {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $green
+        );
+    }
+
+    &-teal {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $green
+        );
+    }
+
+    &-cyan {
+        background: linear-gradient(
+            45deg,
+            $black $card-gradient-percent,
+            $cyan
+        );
+    }
+}
